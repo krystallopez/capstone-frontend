@@ -8,6 +8,8 @@
     |
     <router-link to="/login">Log In</router-link>
     |
+    <router-link to="/logout">Log Out</router-link>
+    |
     <router-link to="/products">All Products</router-link>
   </nav>
   <router-view />

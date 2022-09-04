@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import SignUpView from "../views/SignUpView.vue";
 import LogInView from "../views/LogInView.vue";
+import LogoutView from "../views/LogoutView.vue";
 import ProductsIndex from "../views/ProductsIndex.vue";
+import ProductsShow from "../views/ProductsShow.vue";
 
 const routes = [
   {
@@ -32,9 +34,21 @@ const routes = [
   },
 
   {
+    path: "/logout",
+    name: "logout",
+    component: LogoutView,
+  },
+
+  {
     path: "/products",
     name: "products-index",
     component: ProductsIndex,
+  },
+
+  {
+    path: "/products/:id",
+    name: "products-show",
+    component: ProductsShow,
   },
 ];
 

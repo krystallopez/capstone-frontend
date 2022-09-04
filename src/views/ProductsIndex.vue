@@ -12,8 +12,8 @@ export default {
   methods: {
     indexProducts: function () {
       axios.get("/products.json").then((response) => {
-        console.log("products index", response);
         this.products = response.data;
+        console.log("products index", this.products);
       });
     },
   },
@@ -30,6 +30,15 @@ export default {
       <img v-bind:src="product.image_3" v-bind:alt="product.name" />
       <p>{{ product.price }}</p>
       <p>{{ product.description }}</p>
+      <a v-bind:href="`/products/${product.id}`">To Product</a>
     </div>
   </div>
 </template>
+
+<style scoped>
+img {
+  margin: auto;
+  width: 400px;
+  height: 400px;
+}
+</style>

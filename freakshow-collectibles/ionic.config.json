@@ -1,0 +1,7 @@
+{
+  "name": "Freakshow Collectibles",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
